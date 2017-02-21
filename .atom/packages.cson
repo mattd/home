@@ -5,6 +5,7 @@ packages: [
   "emacs-plus"
   "fonts"
   "linter"
+  "linter-eslint"
   "nucleus-dark-ui"
   "package-sync"
 ]
