@@ -1,0 +1,48 @@
+@ui-font-size: 12px;
+
+.status-bar {
+    font-size: @ui-font-size;
+    height: @ui-font-size * 2.75;
+}
+
+status-bar span {
+    font-size: @ui-font-size;
+}
+
+.btn {
+    background-color: #1d1e21!important;
+    background-image: none!important;
+    color: #d9dbde!important;
+    outline: none!important;
+
+    &.selected {
+        background-color: #2a2e31!important;
+    }
+}
+
+.btn:last-child {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.btn-group {
+    & > .btn:last-child,
+    & > .btn.selected:last-child,
+    & > .dropdown-toggle {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+}
+
+.btn:first-child {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.btn-group {
+    & > .btn:first-child,
+    & > .btn.selected:last-child {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+}

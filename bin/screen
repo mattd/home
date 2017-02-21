@@ -1,0 +1,42 @@
+#!/bin/bash
+# Wrap GNU screen.  Extends to:
+# * prefer .screenrc-$USER or .screenrc in $PWD before $HOME/.screenrc.
+# * default the sessionname to the basename of $PWD.
+
+export PROJECT_NAME=${PWD##*/}
+
+# Override these with eponymous environment variables.
+SCREEN=${SCREEN:-/usr/local/bin/screen} # absolute path to screen executable
+SCREENRC=${SCREENRC:-.screenrc} # conventional name of screenrc
+SCREENRC_DEFAULT=${SCREENRC_DEFAULT:-$HOME/$SCREENRC} # project default
+
+# SCREENRC and SCREENRC_DEFAULT variables:
+#
+# SCREENRC is configuring what GNU screen calls it's rc file.
+# Below, you'll see that this wrapper looks for a project-local .screenrc which
+# is expected to source $HOME/.screenrc.  If no local .screenrc is found, use
+# $SCREENRC_DEFAULT, which is $HOME/.screenrc, unless you set the
+# SCREENRC_DEFAULT env variable to some rc file which provides a nice set of
+# windows which you'd like to have on each project.
+#
+# See ~/.screenrc-default in the repository containing this wrapper.
+
+# Build a string of options & arguments to inject into screen command call.
+local_args=""
+
+# If no arguments are given, set a default sessionname.
+if [ $# -eq 0 ]; then
+    # Set sessionname to basename of $PWD, e.g. ~/someproject is someproject.
+    local_args="$local_args -S ${PROJECT_NAME}"
+fi
+
+# Select a screenrc, in order of priority (see comment at top of file).
+if [ -e ${SCREENRC}-${USER} ]; then
+    $SCREEN -c $SCREENRC-${USER} $local_args $@
+elif [ -e $SCREENRC ]; then
+    $SCREEN -c $SCREENRC $local_args $@
+elif [ -e $SCREENRC_DEFAULT ]; then
+    $SCREEN -c $SCREENRC_DEFAULT $local_args $@
+else
+    $SCREEN $local_args $@
+fi

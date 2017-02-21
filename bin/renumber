@@ -1,0 +1,19 @@
+#!/bin/bash
+
+screen -X msgminwait 0
+screen -X msgwait 0
+
+CURRENT_WINDOW=$(screen -Q title)
+MAX_WINDOW=40 #Default compiled in
+
+let NEXT="1"
+
+for CURRENT in $(seq 0 ${MAX_WINDOW}); do
+    screen -p ${CURRENT} -Q info >/dev/null 2>&1 &&
+    screen -p ${CURRENT} -X number ${NEXT} &&
+    let NEXT="${NEXT}+1"
+done
+
+screen -Q select "${CURRENT_WINDOW}" >/dev/null 2>&1
+screen -X msgminwait 1
+screen -X msgwait 5

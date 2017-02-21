@@ -1,0 +1,52 @@
+"*":
+  "atom-typescript": {}
+  "bracket-matcher":
+    autocompleteSmartQuotes: false
+  core:
+    disabledPackages: [
+      "tabs"
+      "wrap-guide"
+      "background-tips"
+    ]
+    projectHome: "/Users/mattdawson/development"
+    telemetryConsent: "no"
+    themes: [
+      "one-dark-ui"
+      "base16-tomorrow-dark-theme"
+    ]
+    useCustomTitleBar: true
+  editor:
+    fontFamily: "Deja Vu Sans Mono"
+    tabLength: 4
+  "exception-reporting":
+    userId: "f7d01a5e-736e-6bc3-492b-d4193ce3815d"
+  fonts:
+    fontFamily: "DejaVu Mono"
+  linter:
+    errorPanelHeight: 211
+    showErrorInline: false
+  "package-sync":
+    createOnChange: true
+    forceOverwrite: true
+  "tree-view": {}
+  "tree-view-open-files": {}
+  welcome:
+    showOnStartup: false
+  whitespace:
+    ensureSingleTrailingNewline: false
+    ignoreWhitespaceOnCurrentLine: false
+".js.regexp.replacement.source":
+  editor:
+    tabLength: 4
+".js.regexp.source":
+  editor:
+    tabLength: 4
+".js.source":
+  editor:
+    tabLength: 4
+".source.ts":
+  editor:
+    tabLength: 4
+".source.tsx":
+  editor:
+    tabLength: 4
