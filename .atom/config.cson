@@ -16,6 +16,7 @@
     ]
     useCustomTitleBar: true
   editor:
+    atomicSoftTabs: false
     fontFamily: "Deja Vu Sans Mono"
     tabLength: 4
   "exception-reporting":
