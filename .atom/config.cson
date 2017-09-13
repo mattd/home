@@ -1,5 +1,8 @@
 "*":
-  "atom-typescript": {}
+  "atom-package-deps":
+    ignored: [
+      "linter"
+    ]
   "bracket-matcher":
     autocompleteSmartQuotes: false
   core:
@@ -14,18 +17,16 @@
       "one-dark-ui"
       "base16-tomorrow-dark-theme"
     ]
-    useCustomTitleBar: true
+    titleBar: "custom"
   editor:
     atomicSoftTabs: false
     fontFamily: "Deja Vu Sans Mono"
+    softWrap: true
     tabLength: 4
   "exception-reporting":
     userId: "f7d01a5e-736e-6bc3-492b-d4193ce3815d"
   fonts:
     fontFamily: "DejaVu Mono"
-  linter:
-    errorPanelHeight: 211
-    showErrorInline: false
   "package-sync":
     createOnChange: true
     forceOverwrite: true

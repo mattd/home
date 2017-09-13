@@ -1,10 +1,10 @@
 packages: [
   "advanced-open-file"
-  "atom-typescript"
+  "atom-ide-ui"
   "block-comment"
   "emacs-plus"
   "fonts"
-  "linter"
+  "ide-typescript"
   "linter-eslint"
   "nucleus-dark-ui"
   "package-sync"
