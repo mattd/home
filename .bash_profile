@@ -18,7 +18,7 @@ PS1='[\u@\h \W]\$ '
 alias ll='ls -al'
 alias gl='git log --graph --decorate --oneline'
 alias gv='git log --graph --decorate'
-alias a='atom'
+alias c='code'
 
 export NVM_DIR="$HOME/.nvm"
 . "/usr/local/opt/nvm/nvm.sh"
