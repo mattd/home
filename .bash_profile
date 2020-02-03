@@ -13,6 +13,8 @@ export PATH
 export CLICOLOR=1
 export TERM=screen-256color
 
+export BASH_SILENCE_DEPRECATION_WARNING=1
+
 PS1='[\u@\h \W]\$ '
 
 alias ll='ls -al'

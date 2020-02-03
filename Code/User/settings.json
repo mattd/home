@@ -8,6 +8,12 @@
     "workbench.colorTheme": "Base16 Tomorrow Dark",
     "workbench.statusBar.visible": true,
     "editor.minimap.enabled": false,
+    "workbench.activityBar.visible": false,
+    "workbench.statusBar.feedback.visible": false,
+    "workbench.startupEditor": "newUntitledFile",
     "workbench.editor.showTabs": false,
-    "workbench.activityBar.visible": false
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "prettier.tabWidth": 4
 }
