@@ -515,7 +515,8 @@ This function is called at the very end of Spacemacs startup, after layer
 configuration.
 Put your configuration code here, except for variables that should be set
 before packages are loaded."
-  (xclip-mode 1))
+  (xclip-mode 1)
+  (global-set-key (kbd "C-x g") 'magit-status))
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
