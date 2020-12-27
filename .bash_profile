@@ -21,6 +21,7 @@ alias ll='ls -al'
 alias gl='git log --graph --decorate --oneline'
 alias gv='git log --graph --decorate'
 alias c='code'
+alias e='emacs'
 
 export NVM_DIR="$HOME/.nvm"
 . "/usr/local/opt/nvm/nvm.sh"
