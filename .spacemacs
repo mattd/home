@@ -42,7 +42,8 @@ This function should only modify configuration layer settings."
      better-defaults
      emacs-lisp
      git
-     helm
+     ;; helm
+     ivy
      ;; lsp
      markdown
      (multiple-cursors :variables
