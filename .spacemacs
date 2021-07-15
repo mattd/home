@@ -45,7 +45,7 @@ This function should only modify configuration layer settings."
      ;; helm
      ivy
      ;; lsp
-     markdown
+     ;; markdown
      (multiple-cursors :variables
                        multiple-cursors-backend 'mc)
      org

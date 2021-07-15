@@ -2,7 +2,6 @@ PATH_FRAGS=(
  '/Users/mattdawson/bin'
  '/usr/local/bin'
  '/usr/local/sbin'
- `yarn global bin`
  './node_modules/.bin'
  $PATH
 )
