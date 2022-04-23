@@ -1,5 +1,6 @@
 PATH_FRAGS=(
  '/Users/mattdawson/bin'
+ '/opt/homebrew/bin'
  '/usr/local/bin'
  '/usr/local/sbin'
  './node_modules/.bin'
@@ -23,4 +24,4 @@ alias c='code'
 alias e='emacs'
 
 export NVM_DIR="$HOME/.nvm"
-. "/usr/local/opt/nvm/nvm.sh"
+. "/opt/homebrew/opt/nvm/nvm.sh"

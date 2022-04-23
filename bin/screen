@@ -6,7 +6,7 @@
 export PROJECT_NAME=${PWD##*/}
 
 # Override these with eponymous environment variables.
-SCREEN=${SCREEN:-/usr/local/bin/screen} # absolute path to screen executable
+SCREEN=${SCREEN:-/opt/homebrew/bin/screen} # absolute path to screen executable
 SCREENRC=${SCREENRC:-.screenrc} # conventional name of screenrc
 SCREENRC_DEFAULT=${SCREENRC_DEFAULT:-$HOME/$SCREENRC} # project default
 
