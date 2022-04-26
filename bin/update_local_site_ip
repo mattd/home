@@ -3,7 +3,7 @@ IP=$(wget -O - v4.ident.me 2>/dev/null && echo)
 if [ -z "$1" ]; then
     exit 1
 else
-    curl -u \
-    "$(< ~/.secrets/registrar_email):$(< ~/.secrets/registrar_password)" \
+    curl \
+    -u "$(< ~/.secrets/registrar_email):$(< ~/.secrets/registrar_password)" \
     "https://iwantmyname.com/basicauth/ddns?hostname=$1&myip=$IP"
 fi
