@@ -5,7 +5,9 @@ else
     SITES_DIR="$HOME/sites"
     CACHE_FILE="$SITES_DIR/$1.ip"
 
-    touch $CACHE_FILE
+    if [ ! -f "$CACHE_FILE" ]; then
+        touch $CACHE_FILE
+    fi
 
     CURRENT_IP=$(curl v4.ident.me 2>/dev/null && echo)
     OLD_IP=$(< $CACHE_FILE)
