@@ -13,11 +13,11 @@ else
     if [ "$CURRENT_IP" = "$OLD_IP" ]; then
        exit 0
     else
-        curl -u "$(< $SITES_DIR/.secrets/registrar_email):\"`
-                `$(< $SITES_DIR/.secrets/registrar_password)"`
-                `"https://iwantmyname.com/basicauth/ddns"`
-                `"?hostname=$1&myip=$CURRENT_IP" \
-                2>/dev/null
+        curl -u "$(< $SITES_DIR/.secrets/registrar_email):`
+                `$(< $SITES_DIR/.secrets/registrar_password)" \
+             "https://iwantmyname.com/basicauth/ddns`
+             `?hostname=$1&myip=$CURRENT_IP" \
+             2>/dev/null
 
         echo $CURRENT_IP > $CACHE_FILE
     fi
