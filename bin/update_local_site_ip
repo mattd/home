@@ -2,8 +2,10 @@
 if [ -z "$1" ]; then
     exit 1
 else
+    CACHE_FILE="$1.ip"
+
     CURRENT_IP=$(wget -O - v4.ident.me 2>/dev/null && echo)
-    OLD_IP=$(< ~/external_ip)
+    OLD_IP=$(< ~/$CACHE_FILE)
 
     if [ "$CURRENT_IP" = "$OLD_IP" ]; then
        exit 0
@@ -12,6 +14,6 @@ else
         -u "$(< ~/.secrets/registrar_email):$(< ~/.secrets/registrar_password)" \
         "https://iwantmyname.com/basicauth/ddns?hostname=$1&myip=$CURRENT_IP"
 
-        echo $CURRENT_IP > ~/external_ip
+        echo $CURRENT_IP > ~/$CACHE_FILE
     fi
 fi
