@@ -3,7 +3,7 @@ if [ -z "$1" ]; then
     exit 1
 else
     DOMAINS_DIR="$HOME/domains"
-    CACHE_FILE="$SITES_DIR/$1.ip"
+    CACHE_FILE="$DOMAINS_DIR/$1.ip"
 
     if [ ! -f "$CACHE_FILE" ]; then
         touch $CACHE_FILE
