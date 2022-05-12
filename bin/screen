@@ -5,8 +5,14 @@
 
 export PROJECT_NAME=${PWD##*/}
 
+if [[ -L "/usr/local/bin/brew" ]]; then
+    HOMEBREW_PREFIX='/usr/local'
+else
+    HOMEBREW_PREFIX='/opt/homebrew'
+fi
+
 # Override these with eponymous environment variables.
-SCREEN=${SCREEN:-/opt/homebrew/bin/screen} # absolute path to screen executable
+SCREEN=${SCREEN:-$HOMEBREW_PREFIX/bin/screen} # absolute path to screen executable
 SCREENRC=${SCREENRC:-.screenrc} # conventional name of screenrc
 SCREENRC_DEFAULT=${SCREENRC_DEFAULT:-$HOME/$SCREENRC} # project default
 
