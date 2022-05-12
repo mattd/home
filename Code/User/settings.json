@@ -3,7 +3,6 @@
     "window.zoomLevel": 0,
     "editor.fontSize": 15,
     "editor.cursorStyle": "block",
-    "editor.renderIndentGuides": false,
     "editor.renderLineHighlight": "gutter",
     "workbench.colorTheme": "Base16 Tomorrow Dark",
     "workbench.statusBar.visible": true,
@@ -15,5 +14,6 @@
     "[javascript]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
-    "prettier.tabWidth": 4
+    "prettier.tabWidth": 4,
+    "editor.guides.indentation": false
 }

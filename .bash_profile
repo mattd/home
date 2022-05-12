@@ -1,6 +1,12 @@
+if [[ -L "/usr/local/bin/brew" ]]; then
+    HOMEBREW_PREFIX='/usr/local'
+else
+    HOMEBREW_PREFIX='/opt/homebrew'
+fi
+
 PATH_FRAGS=(
  '/Users/mattdawson/bin'
- '/opt/homebrew/bin'
+ "$HOMEBREW_PREFIX/bin"
  '/usr/local/bin'
  '/usr/local/sbin'
  './node_modules/.bin'
@@ -23,4 +29,4 @@ alias gv='git log --graph --decorate'
 alias e='emacsclient -t'
 
 export NVM_DIR="$HOME/.nvm"
-. "/opt/homebrew/opt/nvm/nvm.sh"
+. "$HOMEBREW_PREFIX/opt/nvm/nvm.sh"
