@@ -1,0 +1,12 @@
+#!/bin/bash
+if [ -z "$1" ]; then
+    exit 1
+else
+    DOMAIN="$1"
+    ssh foundryvtt@$DOMAIN "cd $DOMAIN; tar czvf Data.tgz Data/;"
+    scp foundryvtt@$DOMAIN:$DOMAIN/Data.tgz .
+    rm -r Data
+    tar xzvf Data.tgz
+    rm Data.tgz
+    ssh foundryvtt@$DOMAIN "rm $DOMAIN/Data.tgz"
+fi
