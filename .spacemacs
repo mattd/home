@@ -519,6 +519,7 @@ configuration.
 Put your configuration code here, except for variables that should be set
 before packages are loaded."
   (xclip-mode 1)
+  (setq org-startup-indented t)
   (global-set-key (kbd "C-x g") 'magit-status)
   (setq magit-display-buffer-function
         #'magit-display-buffer-fullframe-status-v1)
