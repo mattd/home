@@ -1,6 +1,0 @@
-#!/bin/bash
-if [ -z "$1" ]; then
-    open -a "Google Chrome" --args --new-window
-else
-    open -a "Google Chrome" "$1" --args --new-window
-fi

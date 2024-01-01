@@ -1,0 +1,6 @@
+#!/bin/bash
+if [ -z "$1" ]; then
+    /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --new-window --app=https://owlbear.rodeo
+else
+    /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --new-window --app="$1"
+fi
