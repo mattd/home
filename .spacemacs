@@ -47,7 +47,7 @@ This function should only modify configuration layer settings."
      ;; helm
      ivy
      ;; lsp
-     ;; markdown
+     markdown
      (multiple-cursors :variables
                        multiple-cursors-backend 'mc)
      org
@@ -70,7 +70,8 @@ This function should only modify configuration layer settings."
    ;; `:location' property: '(your-package :location "~/path/to/your-package/")
    ;; Also include the dependencies as they will not be resolved automatically.
    dotspacemacs-additional-packages '(xclip
-                                      visual-fill-column)
+                                      visual-fill-column
+                                      adaptive-wrap)
 
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()
@@ -206,7 +207,7 @@ It should only modify the values of Spacemacs settings."
    ;; *scratch* buffer will be saved and restored automatically.
    dotspacemacs-scratch-buffer-persistent nil
 
-   ;; If non-nil, `kill-buffer' on *scratch* buffer
+
    ;; will bury it instead of killing.
    dotspacemacs-scratch-buffer-unkillable nil
 
@@ -528,7 +529,13 @@ before packages are loaded."
   (global-set-key (kbd "<mouse-5>") 'scroll-up-line)
   (global-unset-key (kbd "M-<down-mouse-1>"))
   (global-set-key (kbd "M-<mouse-1>") 'mc/add-cursor-on-click)
-  (global-set-key (kbd "M-\\") 'mc/mark-all-in-region))
+  (global-set-key (kbd "M-\\") 'mc/mark-all-in-region)
+  (add-hook 'markdown-mode-hook
+            (lambda ()
+              (setq markdown-indent-function 'indent-tab)
+              (setq indent-tabs-mode t)
+              (setq tab-width 4)))
+  )
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
