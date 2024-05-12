@@ -530,11 +530,14 @@ before packages are loaded."
   (global-unset-key (kbd "M-<down-mouse-1>"))
   (global-set-key (kbd "M-<mouse-1>") 'mc/add-cursor-on-click)
   (global-set-key (kbd "M-\\") 'mc/mark-all-in-region)
-  (add-hook 'markdown-mode-hook
-            (lambda ()
-              (setq markdown-indent-function 'indent-tab)
-              (setq indent-tabs-mode t)
-              (setq tab-width 4)))
+  (defun configure-markdown-mode ()
+    (visual-line-mode 1)
+    (adaptive-wrap-prefix-mode 1)
+    (setq auto-indent-mode t)
+    (setq indent-tabs-mode t)
+    (setq indent-line-function (quote insert-tab))
+    (setq tab-width 4))
+  (add-hook 'markdown-mode-hook 'configure-markdown-mode)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
