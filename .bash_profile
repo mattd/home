@@ -19,6 +19,9 @@ export PATH
 export CLICOLOR=1
 export TERM=screen-256color
 
+export VISUAL="emacsclient -t"
+export EDITOR="$VISUAL"
+
 export BASH_SILENCE_DEPRECATION_WARNING=1
 
 PS1='[\u@\h \W]\$ '
@@ -27,6 +30,8 @@ alias ll='ls -al'
 alias gl='git log --graph --decorate --oneline'
 alias gv='git log --graph --decorate'
 alias e='emacsclient -t'
+alias gist='gh gist'
+alias odn='open_dated_note'
 
 export NVM_DIR="$HOME/.nvm"
 . "$HOMEBREW_PREFIX/opt/nvm/nvm.sh"
