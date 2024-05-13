@@ -31,7 +31,7 @@ alias gl='git log --graph --decorate --oneline'
 alias gv='git log --graph --decorate'
 alias e='emacsclient -t'
 alias gist='gh gist'
-alias odn='open_dated_note'
+alias dn='open_dated_note'
 
 export NVM_DIR="$HOME/.nvm"
 . "$HOMEBREW_PREFIX/opt/nvm/nvm.sh"
