@@ -1,0 +1,15 @@
+#!/bin/bash
+
+sayings=(
+    "Okay"
+    "I understand"
+    "Sure, why not"
+    "Thanks for coming"
+    "Sounds good"
+)
+
+while true; do
+    SAYING=${sayings[RANDOM % ${#sayings[@]}]}
+    say -r 300 $SAYING
+    sleep $(((RANDOM % 5 ) + 1))
+done
