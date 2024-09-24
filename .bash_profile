@@ -26,12 +26,12 @@ export BASH_SILENCE_DEPRECATION_WARNING=1
 
 PS1='[\u@\h \W]\$ '
 
-alias ll='ls -al'
-alias gl='git log --graph --decorate --oneline'
-alias gv='git log --graph --decorate'
+alias dn='open_dated_note'
 alias e='emacsclient -t'
 alias gist='gh gist'
-alias dn='open_dated_note'
+alias gl='git log --graph --decorate --oneline'
+alias gv='git log --graph --decorate'
+alias ll='ls -al'
 
 export NVM_DIR="$HOME/.nvm"
 . "$HOMEBREW_PREFIX/opt/nvm/nvm.sh"
